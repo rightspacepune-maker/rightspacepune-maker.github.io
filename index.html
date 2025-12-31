@@ -1,147 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RightSpace – Interior Cost Clarity</title>
+:root {
+  --bg-main: #f6f5f3;
+  --bg-muted: #eef1ed;
+  --bg-accent: #f4efe6;
+  --text-main: #1f2933;
+  --text-soft: #4b5563;
+  --accent: #d9a441;
+  --white: #ffffff;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+/* RESET */
+* {
+  box-sizing: border-box;
+}
 
-<body>
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-main);
+  background: var(--bg-main);
+}
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-inner">
-    <img src="logo.png" alt="RightSpace" class="logo">
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#testimonials">Testimonials</a>
-    </nav>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    <a href="#contact" class="btn primary header-cta">Contact Us</a>
-  </div>
-</header>
+/* LAYOUT */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <h1>
-        Bought a Home.<br>
-        <span>Now Confused About Interiors?</span>
-      </h1>
+.container.narrow {
+  max-width: 780px;
+}
 
-      <p>
-        Most home loans don’t cover interiors.  
-        RightSpace helps you understand <strong>what it will actually cost</strong>
-        to furnish your home — <strong>before possession</strong>.
-      </p>
+.section {
+  padding: 100px 0;
+}
 
-      <a href="#buyers" class="btn primary large">
-        Check My Interior Cost
-      </a>
-    </div>
+.section-muted {
+  background: var(--bg-muted);
+}
 
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Modern home interior">
-    </div>
-  </div>
-</section>
+.section-accent {
+  background: var(--bg-accent);
+}
 
-<!-- PROBLEM -->
-<section class="section problem">
-  <div class="container narrow">
-    <h2>The Interior Cost Shock No One Warns You About</h2>
-    <ul>
-      <li>Savings drained during booking & registration</li>
-      <li>Home loans don’t fund interiors</li>
-      <li>Move-in delayed by months</li>
-      <li>Rushed, expensive decisions</li>
-    </ul>
-  </div>
-</section>
+/* HERO */
+.hero {
+  padding: 100px 0;
+}
 
-<!-- SOLUTION -->
-<section class="section solution">
-  <div class="container narrow">
-    <h2>RightSpace Fixes This at the Booking Stage</h2>
-    <p>
-      Layout-based planning, realistic cost clarity,
-      and optional standardized furnishing packages —
-      before possession stress begins.
-    </p>
-  </div>
-</section>
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
 
-<!-- BUYERS -->
-<section id="buyers" class="section accent">
-  <div class="container narrow">
-    <h2>For Homebuyers</h2>
-    <p>
-      Avoid interior panic. Avoid last-minute loans.
-      Move in faster with essentials done right.
-    </p>
-  </div>
-</section>
+.logo {
+  width: 120px;
+  margin-bottom: 40px;
+}
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container narrow">
-    <h2>About RightSpace</h2>
-    <p>
-      RightSpace exists to eliminate post-booking interior cost shock
-      for first-time homebuyers in India.
-    </p>
-  </div>
-</section>
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
 
-<!-- PROJECTS -->
-<section id="projects" class="section muted">
-  <div class="container narrow">
-    <h2>Projects</h2>
-    <p>Piloting across Pune residential developments.</p>
-  </div>
-</section>
+.hero h1 span {
+  color: var(--text-soft);
+}
 
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="section">
-  <div class="container narrow">
-    <h2>Testimonials</h2>
-    <p>Early buyer and builder feedback coming soon.</p>
-  </div>
-</section>
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 520px;
+}
 
-<!-- CONTACT -->
-<section id="contact" class="section muted">
-  <div class="container narrow">
-    <h2>Contact Us</h2>
-    <p><strong>Call us at +91-7774995657</strong></p>
+.hero-cta {
+  margin-top: 40px;
+}
 
-    <div class="socials">
-      <a href="https://www.instagram.com/rightspacepune" target="_blank">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
-      </a>
-      <a href="https://wa.me/917774995657" target="_blank">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp">
-      </a>
-    </div>
-  </div>
-</section>
+.secondary-links {
+  margin-top: 12px;
+}
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container narrow">
-    <img src="logo.png" alt="RightSpace" class="footer-logo">
-    <p>
-      RightSpace is a layout planning and furnishing solutions platform.
-      We do not sell real estate.
-    </p>
-  </div>
-</footer>
+.secondary-links a {
+  margin-right: 18px;
+  font-size: 14px;
+  color: var(--text-soft);
+}
 
-</body>
-</html>
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #111;
+}
+
+.btn.large {
+  padding: 18px 34px;
+  font-size: 16px;
+}
+
+/* SPLIT SECTIONS */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.split.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.split-text h2 {
+  margin-top: 0;
+}
+
+.split-image img {
+  border-radius: 12px;
+}
+
+/* TYPOGRAPHY */
+h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
+/* LISTS */
+.problem-list,
+.buyer-benefits,
+.neutral-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.problem-list li,
+.buyer-benefits li,
+.neutral-list li {
+  margin-bottom: 14px;
+}
+
+/* STEPS */
+.steps .step {
+  margin-bottom: 30px;
+}
+
+/* BUYER BOX */
+.buyer-box {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+/* FOOTER */
+.footer {
+  background: #1c1c1c;
+  color: #cbd5e1;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer-logo {
+  margin: 0 auto 20px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero-grid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+}
